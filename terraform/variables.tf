@@ -3,5 +3,5 @@ variable "region" {
 }
 
 variable "project_name" {
-    default = "eks=devops"
+    default = "eks-devops"
 }

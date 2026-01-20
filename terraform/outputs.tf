@@ -10,3 +10,14 @@ output "public_subnets"{
     value = module.vpc.public_subnets
 }
 
+output "nat_gateways"{
+    value = module.vpc.natgw_ids
+}
+
+output "cluster_name"{
+    value = module.eks.cluster_name
+}
+
+output "cluster_endpoint"{
+    value = module.eks.cluster_endpoint
+}

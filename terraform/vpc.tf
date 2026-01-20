@@ -1,7 +1,8 @@
 module "vpc" {
   source = "terraform-aws-modules/vpc/aws"
+  version = "5.4.0"
 
-  name = "my-vpc"
+  name = "eks-devops-vpc"
   cidr = "10.0.0.0/16"
 
   azs             = ["us-west-2a", "us-west-2b", "us-west-2c"]
@@ -13,5 +14,6 @@ module "vpc" {
 
   tags = {
     Project = var.project_name
+    auto-delete = "no"
   }
 }
